@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fully tech</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    :root{
+      --primary-color:#949df1;
+      --secondary-color:#cadaf8;
+      --text-color:#ffffff;
+    }
+
+    body{
+      width:100%;
+      min-height: 100vh;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header{
+      background-color: var(--primary-color);
+      color:var(--text-color);
+      text-shadow: 1px 1px 8px var(--secondary-color);
+      border-radius: 0 0 24px 24px;
+    }
+
+    h1{
+      padding:16px;
+    }
+
+    nav ul {
+      display:flex;
+      justify-content: space-around;
+      font-size: 1.5rem;
+      padding:16px
+    }
+
+    li{
+      list-style: none;
+    }
+    
+    a{
+      text-decoration: none;
+      color:blue;
+    }
+    
+    a:hover{
+      color:var(--secondary-color);
+    }
+
+    section{
+      min-height: 32rem;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 48
+    }
+
+    .product-image{
+      padding: 16px;
+    }
+
+    .carrousel{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-products{
+      border-radius: 50%;
+      padding: 8px;
+      cursor: pointer;
+    }
+    
+    .btn-products:hover{
+      background-color: var(--text-color);
+    }
+
+    .btn-products:active{
+      border:none
+    }
+
+    .product-description{
+      background-color:var(--secondary-color);
+      margin: 8px 8rem;
+      padding:16px;
+    }
+    
+    .product-description>div{
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .product-description>div .price{
+      margin:32px
+    }
+
+    footer{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px;
+      background-color: var(--primary-color);
+    }
+
+    footer div ul li{
+      font-size: 12px;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Wellcome to fullytech.com</h1>
+    <nav>
+      <ul>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About us</a>
+        </li>
+        <li>
+          <a href="#">Contact us</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <div class="carrousel">
+      <button class="btn-products">
+        <span class="material-symbols-outlined">
+          arrow_back_ios
+        </span>
+      </button>
+      <figure class="product-image">
+        <img src="../src/assets/images/product1.jpg" alt="product" style="width:24rem">
+        <figcaption>product</figcaption>
+      </figure>
+      <button class="btn-products">
+        <span class="material-symbols-outlined">
+          arrow_forward_ios
+        </span>
+      </button>
+    </div>
+    <div class="product-description">
+      <h3>Portatil lenovo x2 ps</h3>
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolor porro nam cumque eum nihil suscipit aspernatur harum tempore, cupiditate sequi tempora officiis nesciunt vitae officia, adipisci maxime dolorem autem aliquam dicta ut? Ullam sint eveniet cupiditate, labore quidem quis iusto nesciunt dolores repellendus cumque officia quos corporis, delectus, quisquam ut. Ad, aut tenetur rerum cumque porro sequi ipsa in at dolorum. Obcaecati rem provident tempora deserunt quidem ad minima unde exercitationem voluptas iusto cumque molestiae, vel ut nisi laboriosam?</p>
+        <p class="price">Precio: <b>$250000</b></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <h3>
+      Co-workers: 
+    </h3>
+    <div>
+      <ul>
+        <li>Estefania Garces Perez</li>
+      </ul>
+      <ul>
+        <li>Lady Julieth Rojas</li>
+      </ul>
+      <ul>
+        <li>Pedro Alexander Beltrán Hernández</li>
+      </ul>
+  
+    </div>
+  </footer>
+</body>
+</html>

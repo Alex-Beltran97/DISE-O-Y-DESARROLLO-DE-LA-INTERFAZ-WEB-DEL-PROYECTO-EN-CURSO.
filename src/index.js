@@ -4,7 +4,7 @@ import renderingContactUs from './pages/contactUs.js';
 
 const content = document.getElementById('product-container');
 
-renderingContactUs();
+renderingHome();
 
 document.addEventListener('click',e=>{
   switch(e.target.id){

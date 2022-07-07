@@ -12,7 +12,7 @@ const products =[
       "Ideal para profesionales en movimiento"
     ],
     price:"4.499.900,00",
-    image:"../src/assets/images/product1.png"
+    image:"../src/assets/images/products/product1.png"
   },
   {
     nameProduct:"iPhone 12",
@@ -33,7 +33,7 @@ const products =[
       "Compatibilidad para mostrar varios idiomas y caracteres simultáneamente"
     ],
     price:"3.699.000,00",
-    image:"../src/assets/images/product2.png"
+    image:"../src/assets/images/products/product2.png"
   },
   {
     nameProduct:"Side by Side 637 Litros GS66SPP Gris",
@@ -46,7 +46,7 @@ const products =[
       "Compresor Smart Inverter"
     ],
     price:"5.669.900,00",
-    image:"../src/assets/images/product3.png"
+    image:"../src/assets/images/products/product3.png"
   },
   {
     nameProduct:"Carga Frontal 22 Kilogramos WF22R6270AP/CO Gris",
@@ -59,7 +59,7 @@ const products =[
       "Disfruta de un elegante diseño"
     ],
     price:"3.569.900,00",
-    image:"../src/assets/images/product4.png"
+    image:"../src/assets/images/products/product4.png"
   }
 ];
 

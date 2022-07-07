@@ -6,167 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fully tech</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    :root{
-      --primary-color:#949df1;
-      --secondary-color:#cadaf8;
-      --text-color:#ffffff;
-    }
-
-    body{
-      width:100%;
-      min-height: 100vh;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    header{
-      background-color: var(--primary-color);
-      color:var(--text-color);
-      text-shadow: 1px 1px 8px var(--secondary-color);
-      border-radius: 0 0 24px 24px;
-    }
-
-    h1{
-      padding:16px;
-    }
-
-    nav ul {
-      display:flex;
-      justify-content: space-around;
-      font-size: 1.5rem;
-      padding:16px
-    }
-
-    li{
-      list-style: none;
-    }
-    
-    a{
-      text-decoration: none;
-      color:blue;
-    }
-    
-    a:hover{
-      color:var(--secondary-color);
-    }
-
-    section{
-      min-height: 32rem;
-    }
-
-    .material-symbols-outlined {
-      font-variation-settings:
-      'FILL' 0,
-      'wght' 400,
-      'GRAD' 0,
-      'opsz' 48
-    }
-
-    .product-image{
-      padding: 16px;
-    }
-
-    .carrousel{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .btn-products{
-      border-radius: 50%;
-      padding: 8px;
-      cursor: pointer;
-    }
-    
-    .btn-products:hover{
-      background-color: var(--text-color);
-    }
-
-    .btn-products:active{
-      border:none
-    }
-
-    .product-description{
-      background-color:var(--secondary-color);
-      margin: 8px 8rem;
-      padding:16px;
-    }
-    
-    .product-description>div{
-      display:flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .product-description>div .price{
-      margin:32px
-    }
-
-    footer{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 24px;
-      background-color: var(--primary-color);
-    }
-
-    footer div ul li{
-      font-size: 12px;
-    }
-
-  </style>
+  <link rel="stylesheet" href="../src/style/main.css">
 </head>
 <body>
   <header>
     <h1>Wellcome to fullytech.com</h1>
     <nav>
-      <ul>
+      <ul class="menu">
         <li>
-          <a href="#">Home</a>
+          <a id="home">Home</a>
         </li>
         <li>
-          <a href="#">About us</a>
+          <a id="about-us">About us</a>
         </li>
         <li>
-          <a href="#">Contact us</a>
+          <a id="contact-us">Contact us</a>
         </li>
       </ul>
     </nav>
   </header>
   <section>
-    <div class="carrousel">
-      <button class="btn-products">
-        <span class="material-symbols-outlined">
-          arrow_back_ios
-        </span>
-      </button>
-      <figure class="product-image">
-        <img src="../src/assets/images/product1.jpg" alt="product" style="width:24rem">
-        <figcaption>product</figcaption>
-      </figure>
-      <button class="btn-products">
-        <span class="material-symbols-outlined">
-          arrow_forward_ios
-        </span>
-      </button>
-    </div>
-    <div class="product-description">
-      <h3>Portatil lenovo x2 ps</h3>
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolor porro nam cumque eum nihil suscipit aspernatur harum tempore, cupiditate sequi tempora officiis nesciunt vitae officia, adipisci maxime dolorem autem aliquam dicta ut? Ullam sint eveniet cupiditate, labore quidem quis iusto nesciunt dolores repellendus cumque officia quos corporis, delectus, quisquam ut. Ad, aut tenetur rerum cumque porro sequi ipsa in at dolorum. Obcaecati rem provident tempora deserunt quidem ad minima unde exercitationem voluptas iusto cumque molestiae, vel ut nisi laboriosam?</p>
-        <p class="price">Precio: <b>$250000</b></p>
-      </div>
+    <div id="product-container">
+      
     </div>
   </section>
   <footer>
@@ -183,8 +44,64 @@
       <ul>
         <li>Pedro Alexander Beltrán Hernández</li>
       </ul>
-  
     </div>
   </footer>
+  <!-- Templates -->
+  <template id="products-template">
+    <div class="carrousel">
+      <span class="material-symbols-outlined  btn-products" id="backward-btn">
+        arrow_back_ios
+      </span>
+      <figure class="product-image">
+        <img id="product-img" src="../src/assets/images/product1.jpg" alt="product">
+        <figcaption id="type-product">product</figcaption>
+      </figure>
+      <span class="material-symbols-outlined btn-products" id="forward-btn">
+        arrow_forward_ios
+      </span>
+    </div>
+    <div class="product-description">
+      <h3>
+        <span id="product-brand">Lenovo</span>
+        <span id="product-name">Lenovo</span>
+      </h3>
+      <div>
+        <p class="description" id="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias dolor porro nam cumque eum nihil suscipit aspernatur harum tempore, cupiditate sequi tempora officiis nesciunt vitae officia, adipisci maxime dolorem autem aliquam dicta ut? Ullam sint eveniet cupiditate, labore quidem quis iusto nesciunt dolores repellendus cumque officia quos corporis, delectus, quisquam ut. Ad, aut tenetur rerum cumque porro sequi ipsa in at dolorum. Obcaecati rem provident tempora deserunt quidem ad minima unde exercitationem voluptas iusto cumque molestiae, vel ut nisi laboriosam?</p>
+        <p class="price">Price: <b>$<span id="product-price">$250000</span></b></p>
+      </div>
+    </div>
+  </template>
+  <template id="aboutUs-template">
+    <div id="aboutUs-container">
+      <h2>About Us</h2>
+      <div>
+        <figure>
+          <img src="../src/assets/images/aboutUs/people1.jpg" alt="photo1">
+        </figure>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga maiores adipisci magnam iusto labore quam doloremque impedit, aperiam atque quae deleniti, ea doloribus nisi. Harum at quibusdam, eveniet doloremque nemo quos tempora distinctio ad officiis, a sit saepe mollitia omnis vel. Quae possimus non neque cupiditate, debitis dolorum unde assumenda quia totam dignissimos! Nostrum magni quibusdam eum, delectus autem adipisci molestias repudiandae eligendi sapiente, dignissimos tenetur iusto nisi modi placeat, dolorum vel corporis hic ipsa unde iste non necessitatibus officia dicta. Vitae voluptas exercitationem ab, quaerat aperiam beatae atque adipisci reprehenderit odio, perferendis sint saepe pariatur natus error, et blanditiis.</p>
+      </div>
+    </div>
+  </template>
+  <template id="contactUs-template">
+    <h2>Contact us</h2>
+    <form id="form-contact">
+      <div>
+        <label for="name">Enter your name:</label>
+        <input class="input-form" type="text" name="name">
+      </div>
+      <div>
+        <label for="email">Enter your email:</label>
+        <input class="input-form" type="email" name="email">
+      </div>
+      <div>
+        <label for="comment">Enter your comment:</label>
+        <textarea class="input-form" name="comment" cols="30" rows="10"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <a href="mailto:raffriff097@gmail.com" id="sendAnEmail" class="hidden" >Mail</a>
+  </template>
+  <!-- scripts -->
+  <script src="../src/index.js" type="module"></script>
 </body>
 </html>
